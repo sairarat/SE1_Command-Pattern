@@ -10,7 +10,7 @@ public class MusicPlayer implements Device {
 
     public MusicPlayer(String playlistName) {
         this.playlistName = playlistName;
-        this.volumeLevel = 50; // Default volume
+        this.volumeLevel = 50;
     }
 
     @Override
@@ -22,9 +22,9 @@ public class MusicPlayer implements Device {
     public Command getCommandFromUser(Scanner scanner) {
         System.out.print("Enter playlist name: ");
         scanner.nextLine(); // Consume newline left-over
-        String playlistName = scanner.nextLine().trim(); // Read full line and trim whitespace
-        System.out.println("Debug: Trimmed playlist name: '" + playlistName + "'"); // Debug to confirm trimming
-        MusicPlayer tempMusicPlayer = new MusicPlayer(playlistName); // Create new instance with trimmed playlist
+        String playlistName = scanner.nextLine().trim(); 
+        System.out.println("Debug: Trimmed playlist name: '" + playlistName + "'"); 
+        MusicPlayer tempMusicPlayer = new MusicPlayer(playlistName); 
         System.out.print("Select command: \n1. Increase Volume\n2. Decrease Volume: ");
         int choice = scanner.nextInt();
         System.out.print("Enter volume change (1-100): ");
@@ -48,4 +48,5 @@ public class MusicPlayer implements Device {
         if (volumeLevel < 0) volumeLevel = 0;
         System.out.println("Volume decreased to " + volumeLevel + "% for currently playing: " + playlistName);
     }
+
 }
