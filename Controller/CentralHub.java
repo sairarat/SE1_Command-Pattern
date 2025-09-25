@@ -13,7 +13,6 @@ public class CentralHub {
         this.devices = new ArrayList<>();
         this.commands = new ArrayList<>();
         this.scanner = new Scanner(System.in);
-        // Register initial devices
         devices.add(new Light.Light());
         devices.add(new Thermostat.Thermostat("Living Room"));
         devices.add(new MusicPlayer.MusicPlayer("Default Playlist"));
@@ -97,4 +96,5 @@ public class CentralHub {
         devices.add(device);
         System.out.println("Registered new device: " + device.getDeviceName());
     }
+
 }
