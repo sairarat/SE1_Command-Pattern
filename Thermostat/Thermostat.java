@@ -10,7 +10,7 @@ public class Thermostat implements Device {
 
     public Thermostat(String roomName) {
         this.roomName = roomName;
-        this.temperature = 20; // Default in Celsius
+        this.temperature = 20; 
     }
 
     @Override
@@ -21,10 +21,10 @@ public class Thermostat implements Device {
     @Override
     public Command getCommandFromUser(Scanner scanner) {
         System.out.print("Enter room name: ");
-        scanner.nextLine(); // Consume newline left-over
-        String roomName = scanner.nextLine().trim(); // Read full line and trim whitespace
-        System.out.println("Debug: Trimmed room name: '" + roomName + "'"); // Debug to confirm trimming
-        Thermostat tempThermostat = new Thermostat(roomName); // Create new instance with trimmed room
+        scanner.nextLine(); 
+        String roomName = scanner.nextLine().trim(); 
+        System.out.println("Debug: Trimmed room name: '" + roomName + "'"); 
+        Thermostat tempThermostat = new Thermostat(roomName); 
         System.out.print("Select command: \n1. Increase Temperature\n2. Decrease Temperature: ");
         int choice = scanner.nextInt();
         System.out.print("Enter degrees (1-100): ");
@@ -45,4 +45,5 @@ public class Thermostat implements Device {
         this.temperature -= degrees;
         System.out.println("Temperature in " + roomName + " decreased to " + temperature + "°C");
     }
+
 }
