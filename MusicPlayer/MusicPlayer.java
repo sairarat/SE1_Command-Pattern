@@ -21,7 +21,7 @@ public class MusicPlayer implements Device {
     @Override
     public Command getCommandFromUser(Scanner scanner) {
         System.out.print("Enter playlist name: ");
-        scanner.nextLine(); // Consume newline left-over
+        scanner.nextLine(); 
         String playlistName = scanner.nextLine().trim(); 
         System.out.println("Debug: Trimmed playlist name: '" + playlistName + "'"); 
         MusicPlayer tempMusicPlayer = new MusicPlayer(playlistName); 
@@ -50,3 +50,4 @@ public class MusicPlayer implements Device {
     }
 
 }
+
