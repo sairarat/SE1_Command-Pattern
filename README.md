@@ -22,5 +22,6 @@ Your challenge is to apply a design pattern that provides a flexible and scalabl
 
 ---
 
-
+## Class Diagram
+![image](https://github.com/sairarat/SE1_Command-Pattern/blob/main/Smart%20Automation%20System.png)
 
